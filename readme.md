@@ -42,16 +42,16 @@ inside the folder in the terminal run below commands
 ## index.php
 Index.php is the main for for browser testing, i followed the examples given in the pdf to showcase the functionality.
 
-    Products: {"R01":32.95,"G01":24.95,"B01":7.95}  
+    Products: ["B01","G01"]  
     Basket Total: 37.85  
       
-    Products: {"R01":32.95,"G01":24.95,"B01":7.95}  
+    Products: ["R01","R01"]  
     Basket Total: 54.38  
       
-    Products: {"R01":32.95,"G01":24.95,"B01":7.95}  
+    Products: ["R01","G01"]  
     Basket Total: 60.85  
       
-    Products: {"R01":32.95,"G01":24.95,"B01":7.95}  
+    Products: ["B01","B01","R01","R01","R01"]  
     Basket Total: 98.28
 
 
