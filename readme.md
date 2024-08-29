@@ -28,7 +28,7 @@ This is a PHP project showcasing the proof of concept for their new sales system
 inside the folder in the terminal run below commands
 
 
-- cd /path/to/folder
+- cd acme-widget
 
 - composer install
 
