@@ -24,7 +24,7 @@ class Basket
 
     public function getProducts(): array
     {
-        return $this->catalogue;
+        return $this->items;
     }
 
     public function total()
