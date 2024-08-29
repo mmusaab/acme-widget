@@ -54,13 +54,12 @@ class BasketTest extends TestCase
     public function testCartExample4()
     {
         $this->basket->add('B01');
-        $this->basket->add('G01');
         $this->basket->add('B01');
         $this->basket->add('R01');
         $this->basket->add('R01');
-        $this->assertEquals('90.28', $this->basket->total());
+        $this->basket->add('R01');
+        $this->assertEquals('98.28', $this->basket->total());
     }
-
 
     public function testSingleProductWithoutOffer()
     {
