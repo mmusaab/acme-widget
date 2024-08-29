@@ -30,6 +30,38 @@ class BasketTest extends TestCase
         $this->basket = new Basket($this->catalogue, $this->deliveryCharges, $this->offers);
     }
 
+    public function testCartExample1()
+    {
+        $this->basket->add('B01');
+        $this->basket->add('G01');
+        $this->assertEquals('37.85', $this->basket->total());
+    }
+
+    public function testCartExample2()
+    {
+        $this->basket->add('R01');
+        $this->basket->add('R01');
+        $this->assertEquals('54.38', $this->basket->total());
+    }
+
+    public function testCartExample3()
+    {
+        $this->basket->add('R01');
+        $this->basket->add('G01');
+        $this->assertEquals('60.85', $this->basket->total());
+    }
+
+    public function testCartExample4()
+    {
+        $this->basket->add('B01');
+        $this->basket->add('G01');
+        $this->basket->add('B01');
+        $this->basket->add('R01');
+        $this->basket->add('R01');
+        $this->assertEquals('90.28', $this->basket->total());
+    }
+
+
     public function testSingleProductWithoutOffer()
     {
         $this->basket->add('G01');
@@ -63,8 +95,9 @@ class BasketTest extends TestCase
     {
         $this->basket->add('R01');
         $this->basket->add('R01');
+        $this->basket->add('R01');
         $this->basket->add('G01');
-        $this->assertEquals('77.33', $this->basket->total());
+        $this->assertEquals('107.33', $this->basket->total());
     }
 
     public function testOrderWithDeliveryChargeTier1()
